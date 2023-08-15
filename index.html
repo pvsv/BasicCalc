@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login page</title>
+    <style>
+      body {
+        background-color: bisque;
+      }
+      h1 {
+        text-align: center;
+      }
+      .form {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+      }
+      .but {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        row-gap: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Calculator of two operands</h1>
+    <form class="form">
+      <label>Number 1</label><br />
+      <input name="t1" type="number" placeholder="Enter first number" />
+      <br /><br />
+      <label>Number 2</label><br />
+      <input name="t2" type="number" placeholder="Enter second number" />
+      <br /><br />
+      <div class="but">
+        <button onclick="sum(t1.value,t2.value)">Addition</button>
+
+        <button onclick="sub(t1.value,t2.value)">Subraction</button>
+
+        <button onclick="mul(t1.value,t2.value)">Multiplication</button>
+
+        <button onclick="div(t1.value,t2.value)">Division</button>
+      </div>
+      <br />
+    </form>
+    <script>
+      function sum(num1, num2) {
+        var sum = parseInt(num1) + parseInt(num2);
+        document.write("sum of given two number is :" + sum);
+      }
+      function sub(num1, num2) {
+        var sub = parseInt(num1) - parseInt(num2);
+        document.write("sub of given two number is :" + sub);
+      }
+      function mul(num1, num2) {
+        var mul = parseInt(num1) * parseInt(num2);
+        document.write("mul of given two number is :" + mul);
+      }
+      function div(num1, num2) {
+        var div = parseInt(num1) / parseInt(num2);
+        document.write("div of given two number is :" + div);
+      }
+    </script>
+  </body>
+</html>
